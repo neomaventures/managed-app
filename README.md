@@ -1,8 +1,8 @@
 # @neomaventures/managed-app
 
-A NestJS testing utility that provides managed application instance handling for E2E tests with automatic lifecycle management and singleton pattern support.
+Managed NestJS application fixture for e2e tests — boots from a module path, caches one instance per path, closes automatically.
 
-[![npm version](https://badge.fury.io/js/@neoma%2Fmanaged-app.svg)](https://www.npmjs.com/package/@neomaventures/managed-app)
+[![npm version](https://img.shields.io/npm/v/%40neomaventures%2Fmanaged-app)](https://www.npmjs.com/package/@neomaventures/managed-app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description

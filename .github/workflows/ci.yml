@@ -28,8 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      # Required for npm provenance — links the published tarball to this
-      # workflow run and commit via OIDC, verifiable on the npm package page.
+      # Required for npm trusted publishing. The npm CLI exchanges this OIDC
+      # token for publish rights, so there is no NPM_TOKEN secret, and npm
+      # generates the provenance attestation automatically.
       id-token: write
     steps:
       - uses: actions/checkout@v4
@@ -54,6 +55,9 @@ jobs:
           }
 
       - run: pnpm build
-      - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Bare `npm publish` — trusted publishing requires npm >= 11.5.1, which
+      # ships with the Node version pinned in .nvmrc. No token, no flags: the
+      # CLI detects the OIDC environment, and `publishConfig.access` in
+      # package.json already marks the scoped package public.
+      - run: npm publish

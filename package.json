@@ -5,7 +5,7 @@
   "author": "Daniel Bruce",
   "repository": {
     "type": "git",
-    "url": "https://github.com/neomaventures/managed-app"
+    "url": "git+https://github.com/neomaventures/managed-app.git"
   },
   "bugs": {
     "url": "https://github.com/neomaventures/managed-app/issues"
