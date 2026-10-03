@@ -1,0 +1,81 @@
+{
+  "name": "@neomaventures/managed-app",
+  "version": "0.1.0",
+  "description": "Managed NestJS application fixture for e2e tests — boots from a module path, caches one instance per path, closes automatically.",
+  "author": "Daniel Bruce",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neomaventures/managed-app"
+  },
+  "bugs": {
+    "url": "https://github.com/neomaventures/managed-app/issues"
+  },
+  "homepage": "https://github.com/neomaventures/managed-app#readme",
+  "keywords": [
+    "nestjs",
+    "testing",
+    "e2e",
+    "jest",
+    "supertest",
+    "test-fixture",
+    "integration-testing"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "!**/*.json",
+    "!**/*.tsbuildinfo"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.lib.json",
+    "test:e2e": "NODE_OPTIONS=--experimental-vm-modules jest --config ./e2e/jest-e2e.json --runInBand",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm build",
+    "test": "pnpm test:e2e"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "11.x",
+    "@nestjs/core": "11.x",
+    "@nestjs/testing": "11.x"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@nestjs/common": "^11.1.18",
+    "@nestjs/core": "^11.1.18",
+    "@nestjs/platform-express": "^11.1.18",
+    "@nestjs/testing": "^11.1.18",
+    "@swc/core": "^1.12.1",
+    "@swc/jest": "^0.2.39",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.5.2",
+    "@types/supertest": "^6.0.2",
+    "eslint": "^10.2.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import-x": "^4.16.2",
+    "eslint-plugin-jest": "^29.15.3",
+    "eslint-plugin-jest-extended": "^3.0.1",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-yml": "^3.3.2",
+    "globals": "^17.4.0",
+    "jest": "^30.3.0",
+    "jest-extended": "^7.0.0",
+    "prettier": "^3.4.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "supertest": "^7.0.0",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.58.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.5.0",
+  "engines": {
+    "node": ">=22"
+  }
+}

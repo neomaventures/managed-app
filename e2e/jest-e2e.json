@@ -1,0 +1,39 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.tsx?$": [
+      "@swc/jest",
+      {
+        "jsc": {
+          "parser": {
+            "syntax": "typescript",
+            "decorators": true,
+            "dynamicImport": true
+          },
+          "transform": {
+            "legacyDecorator": true,
+            "decoratorMetadata": true
+          }
+        }
+      }
+    ]
+  },
+  "setupFiles": [
+    "reflect-metadata",
+    "<rootDir>/build.setup.ts"
+  ],
+  "setupFilesAfterEnv": [
+    "jest-extended/all",
+    "<rootDir>/support/setup.ts"
+  ],
+  "moduleNameMapper": {
+    "^@neomaventures/managed-app$": "<rootDir>/../dist/index.js"
+  }
+}

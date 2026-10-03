@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@neomaventures/managed-app": [
+        "${configDir}/src"
+      ]
+    },
+    "noEmit": true
+  },
+  "include": [
+    "src/**/*",
+    "e2e/**/*"
+  ]
+}
