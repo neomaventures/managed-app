@@ -1,6 +1,6 @@
 {
   "name": "@neomaventures/managed-app",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Managed NestJS application fixture for e2e tests — boots from a module path, caches one instance per path, closes automatically.",
   "author": "Daniel Bruce",
   "repository": {

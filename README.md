@@ -3,6 +3,7 @@
 Managed NestJS application fixture for e2e tests — boots from a module path, caches one instance per path, closes automatically.
 
 [![npm version](https://img.shields.io/npm/v/%40neomaventures%2Fmanaged-app)](https://www.npmjs.com/package/@neomaventures/managed-app)
+[![CI](https://github.com/neomaventures/managed-app/actions/workflows/ci.yml/badge.svg)](https://github.com/neomaventures/managed-app/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
@@ -660,7 +661,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Support
 
-If you encounter any issues or have questions, please file an issue on [GitHub](https://github.com/neomaventures/pack/issues).
+If you encounter any issues or have questions, please file an issue on [GitHub](https://github.com/neomaventures/managed-app/issues).
 
 ## Related Packages
 
